@@ -1,0 +1,19 @@
+  
+ .word-craft .card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .word-craft .card-front img {
+    max-width: 310px;
+    height: auto;
+  }
+  
+  .word-craft .card-back {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

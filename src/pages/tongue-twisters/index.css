@@ -1,0 +1,24 @@
+
+  
+ .togue-twister .card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .togue-twister  .card-front img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .togue-twister .card-back {
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  
+  
+  

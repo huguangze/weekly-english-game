@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+
+import React, {useState} from 'react';
+import { Button, Flex, FloatButton} from 'antd';
+import {RollbackOutlined} from '@ant-design/icons';
+import TongueTwisters from './pages/tongue-twisters';
+import WordCraft from './pages/word-craft';
 import './App.css';
 
+
 function App() {
+
+  const [game, setGame] = useState();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        game ? (
+          game === 'tongueTwister' ? <TongueTwisters /> : <WordCraft />
+        ) : (<Flex gap={10}>
+          <Button size='large' type='primary' onClick={() => setGame("tongueTwister")}>Tongue twister</Button>
+          <Button size='large' type='primary' onClick={() => setGame("workCraft")} >Word Craft</Button>
+        </Flex>)
+      }
+      {game && <FloatButton icon={<RollbackOutlined />}  onClick={() => setGame(null)} />}
+
     </div>
   );
 }
